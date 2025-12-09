@@ -23,6 +23,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
 }
 
 body {
@@ -33,43 +39,89 @@ body {
 }
 
 .navigation {
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-bottom: solid 1px var(--clr-white-60);
+  border-bottom: solid 1px goldenrod;
   display: flex;
   justify-content: space-between;
+  padding: 1.2rem 1.2rem 0rem 1.2rem;
 }
 
 .navigation .nav-panel {
   display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  padding-right: 1rem;
+  justify-content: space-around;
+  gap: 15px;
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   padding: 1rem;
-  border: solid 1px red;
 }
 
-.hero .hero-image {
+.hero-item {
+  padding: 1rem;
   text-align: center;
-  border-right: solid 1px var(--clr-white-70);
-  padding-right: 10rem;
 }
 
-.hero .hero-image img {
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px goldenrod;
+}
+
+.hero-image img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
 }
 
-.hero-item .hero-links {
-  padding-left: 2rem;
+.hero-image img:hover {
+  transform: translateY(-8px);
+  transition: ease-in 0.3s;
+  border: solid 2px goldenrod;
+}
+
+button {
+  border: none;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  color: var(--clr-white-60);
+  border-radius: 5px;
+  transition: ease-in 0.3s;
+}
+
+button:hover {
+  color: goldenrod;
+  cursor: pointer;
+  border-bottom: solid 1px goldenrod;
+  transform: translateY(-3px);
+}
+
+.projects {
+  background-color: var(--clr-white-100);
+  margin-top: 4rem;
+  padding: 1rem;
+  color: var(--clr-black-100);
+}
+
+.project-item {
   display: flex;
-  justify-content: center;
-  gap: 2px;
+  flex-direction: column;
+}
+
+.projects .images .eoc-image {
+  border: 1px solid red;
+  text-align: center;
+}
+
+.projects .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.projects .images img {
+  width: 100%;
+  height: 80%;
 }
