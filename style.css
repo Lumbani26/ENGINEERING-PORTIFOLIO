@@ -99,10 +99,19 @@ button:hover {
 }
 
 .projects {
-  background-color: var(--clr-white-100);
-  margin-top: 4rem;
+  background-color: #f9f8fa;
+  margin-top: 8rem;
   padding: 1rem;
   color: var(--clr-black-100);
+}
+
+.projects-title {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px goldenrod;
+}
+
+.project-item h3 {
+  margin-bottom: 1rem;
 }
 
 .project-item {
@@ -110,18 +119,27 @@ button:hover {
   flex-direction: column;
 }
 
-.projects .images .eoc-image {
-  border: 1px solid red;
-  text-align: center;
-}
-
 .projects .images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.projects .images .eoc-image {
+  text-align: center;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.projects .images .eoc-image:hover {
+  transform: translateY(-8px);
+  transition: ease-in 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projects .images img {
   width: 100%;
-  height: 80%;
+  height: 90%;
 }
