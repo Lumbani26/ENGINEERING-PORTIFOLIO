@@ -29,6 +29,7 @@ ol,
 ul {
   list-style-type: none;
   margin: 0;
+  color: white;
 }
 
 body {
@@ -42,13 +43,30 @@ body {
   border-bottom: solid 1px goldenrod;
   display: flex;
   justify-content: space-between;
-  padding: 1.2rem 1.2rem 0rem 1.2rem;
+  padding: 1.2rem 1.2rem 0.7rem 1.2rem;
 }
 
-.navigation .nav-panel {
+.navigation .nav-panel ul {
   display: flex;
   justify-content: space-around;
   gap: 15px;
+}
+
+.navigation .nav-panel li:hover {
+  transform: translateY(-3px);
+  transition: ease-in 0.3s;
+}
+.navigation .nav-panel li a {
+  color: var(--clr-white-100);
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  transition: ease-in 0.3s;
+}
+
+.navigation .nav-panel li a:hover {
+  color: goldenrod;
+  cursor: pointer;
+  border-bottom: solid 1px goldenrod;
 }
 
 .hero {
@@ -91,11 +109,24 @@ button {
   transition: ease-in 0.3s;
 }
 
-button:hover {
+.hero button:hover {
   color: goldenrod;
   cursor: pointer;
   border-bottom: solid 1px goldenrod;
   transform: translateY(-3px);
+}
+
+.hero a {
+  color: olivedrab;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  transition: ease-in 0.3s;
+}
+
+.hero a:hover {
+  color: goldenrod;
+  cursor: pointer;
+  border-bottom: solid 1px goldenrod;
 }
 
 .projects {
