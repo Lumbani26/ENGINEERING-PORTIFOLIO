@@ -135,11 +135,14 @@ button {
   border-bottom: solid 1px goldenrod;
 }
 
+/* END HERO SECTION */
+
 .projects {
   background-color: #f9f8fa;
   margin-top: 8rem;
   padding: 1rem;
   color: var(--clr-black-100);
+  padding-bottom: 5rem;
 }
 
 .projects-title {
@@ -171,7 +174,7 @@ button {
 }
 
 .projects .images .eoc-image:hover {
-  transform: translateY(-8px);
+  transform: scale(1.05);
   transition: ease-in 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -180,6 +183,41 @@ button {
   width: 100%;
   height: 90%;
 }
+
+/* END PROJECTS STYLE  */
+.skills {
+  padding: 1rem;
+}
+
+.skills-title {
+  border-bottom: solid 1px goldenrod;
+  margin-bottom: 3rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  transition: ease-in 0.3s;
+}
+
+.skill-item-img {
+  width: 85px;
+  height: 90px;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* END SKILLS SECTION */
 
 @media (max-width: 768px) {
   .navigation {
@@ -199,5 +237,11 @@ button {
 
   .projects .images {
     grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 }
