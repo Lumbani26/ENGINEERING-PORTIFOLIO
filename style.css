@@ -113,14 +113,16 @@ h5 {
   margin-bottom: 1rem;
 }
 
-.hero h1 {
+.hero-name {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.6rem;
 }
 
-.hero-name {
-  font-size: 1.15rem;
-  font-weight: 600;
+.hero-headline {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--clr-white-70);
+  margin-bottom: 1.2rem;
 }
 
 .hero-degrees {
