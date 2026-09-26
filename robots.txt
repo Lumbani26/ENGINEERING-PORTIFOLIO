@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lumbani-ceng.vercel.app/sitemap.xml
