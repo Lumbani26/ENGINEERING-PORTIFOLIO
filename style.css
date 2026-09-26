@@ -295,13 +295,13 @@ h5 {
 
 .chapter-photos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 150px));
   gap: 0.8rem;
 }
 
 .chapter-photos figure {
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 12px;
   background: var(--clr-black-80);
   transition:
     transform 0.3s,
@@ -314,15 +314,8 @@ h5 {
 }
 
 .chapter-photos img {
-  width: min(340px, 70vw);
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 10px rgba(218, 165, 32, 0.12);
-
   width: 100%;
-  /* aspect-ratio: 4 / 3; */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -331,6 +324,40 @@ h5 {
   font-size: 0.78rem;
   line-height: 1.4;
   color: var(--clr-white-60);
+}
+
+/* Auto-advancing slideshow: used when a chapter ends up with more than one
+   real photo. Shows one photo at a time and slides to the next. */
+.chapter-photos.carousel {
+  display: block;
+  width: 190px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.9s ease;
+}
+
+.chapter-photos.carousel figure {
+  flex: 0 0 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.chapter-photos.carousel figure:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.chapter-photos.carousel img {
+  width: 100%;
+  height: 100%;
 }
 
 /* chapter with no photos yet: centre the text as a single card */
